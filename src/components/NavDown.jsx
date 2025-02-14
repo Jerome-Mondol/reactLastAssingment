@@ -1,27 +1,78 @@
-import React from 'react'
+import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
 
 const NavDown = () => {
+  const [selectedIndex, setSelectedIndex] = useState(null);
 
-    const icons = [
-        {icon: <i class="ri-layout-grid-line"></i>},
-        {icon: <i class="ri-restaurant-2-line"></i>},
-        {icon: <i class="ri-hotel-line"></i>},
-        {icon: <i class="ri-home-5-line"></i>},
-        {icon: <i class="ri-shopping-bag-line"></i>},
-        {icon: <i class="ri-car-line"></i>},
-        {icon: <i class="ri-brush-line"></i>},
-        {icon: <i class="ri-parent-fill"></i>},
-        {icon: <i class="ri-album-fill"></i>},
-        {icon: <i class="ri-car-washing-line"></i>},
-        {icon: <i class="ri-database-fill"></i>},
-        {icon: <i class="ri-weight-line"></i>}
-    ]
+  const icons = [
+    {
+      icon: <i className="ri-layout-grid-line"></i>,
+      text: "All",
+      link: "/all",
+    },
+    {
+      icon: <i className="ri-restaurant-2-line"></i>,
+      text: "Restaurants",
+      link: "/",
+    },
+    {
+      icon: <i className="ri-hotel-line"></i>,
+      text: "Hotels",
+      link: "/hotels",
+    },
+    {
+      icon: <i className="ri-home-5-line"></i>,
+      text: "Home services",
+      link: "/home-services",
+    },
+    {
+      icon: <i className="ri-shopping-bag-line"></i>,
+      text: "Shopping",
+      link: "/shopping",
+    },
+    {
+      icon: <i className="ri-car-line"></i>,
+      text: "Car location",
+      link: "/car-location",
+    },
+    {
+      icon: <i className="ri-brush-line"></i>,
+      text: "Beauty & Spa",
+      link: "/beauty-spa",
+    },
+    { icon: <i className="ri-parent-fill"></i>, text: "Park", link: "/park" },
+    {
+      icon: <i className="ri-album-fill"></i>,
+      text: "Museum",
+      link: "/museum",
+    },
+    {
+      icon: <i className="ri-car-washing-line"></i>,
+      text: "Car wash",
+      link: "/car-wash",
+    },
+    { icon: <i className="ri-database-fill"></i>, text: "Bars", link: "/bars" },
+    { icon: <i className="ri-weight-line"></i>, text: "Gyms", link: "/gyms" },
+  ];
 
   return (
-    <div>
-
+    <div className="navDown flex justify-between items-center p-7 text-gray-400">
+      {icons.map(({ icon, text, link }, index) => (
+        <NavLink to={link}>
+          <div
+            key={index}
+            className={`flex justify-center items-center flex-col cursor-pointer transition-all duration-200 ${
+              selectedIndex === index ? "text-blue-500" : "hover:text-blue-500"
+            }`}
+            onClick={() => setSelectedIndex(index)}
+          >
+            <div className="text-2xl">{icon}</div>
+            <p>{text}</p>
+          </div>
+        </NavLink>
+      ))}
     </div>
-  )
-}
+  );
+};
 
-export default NavDown
+export default NavDown;

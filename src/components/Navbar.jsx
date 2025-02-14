@@ -1,16 +1,9 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import NavDown from './components/NavDown';
-import Navbar from './components/Navbar';
-import { useState } from 'react';
-import "./index.css";
+import React, { useState } from 'react'
 
-function App() {
-
+const Navbar = () => {
     const [search, setSearch] = useState("");
-
   return (
-    <BrowserRouter>
-      <div>
+    <div>
       <div className="navBar flex justify-between items-center p-7 border border-bottom border-gray-300 pt-12">
             <div className="logo">
                 <img src="./logo.png" alt="" />
@@ -32,12 +25,7 @@ function App() {
             </div>
         </div>
     </div>
-      <NavDown />
-      <Routes>
-
-      </Routes>
-    </BrowserRouter>
-  );
+  )
 }
 
-export default App;
+export default Navbar
