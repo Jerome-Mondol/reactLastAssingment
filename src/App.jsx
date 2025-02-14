@@ -3,6 +3,7 @@ import NavDown from './components/NavDown';
 import Navbar from './components/Navbar';
 import { useState } from 'react';
 import "./index.css";
+import Card from './components/Card';
 
 function App() {
 
@@ -33,6 +34,7 @@ function App() {
         </div>
     </div>
       <NavDown />
+    <Card />
       <Routes>
 
       </Routes>

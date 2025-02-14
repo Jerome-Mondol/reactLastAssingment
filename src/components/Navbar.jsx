@@ -20,7 +20,7 @@ const Navbar = () => {
                 </div>
             </div>
             <div className="feedback flex gap-5 items-center">
-                <i class="ri-global-line text-2xl"></i>
+                <i className="ri-global-line text-2xl"></i>
                 <button className="bg-black px-7 py-3 text-white rounded-4xl cursor-pointer" >MyFeedback for business</button>
             </div>
         </div>
@@ -29,3 +29,4 @@ const Navbar = () => {
 }
 
 export default Navbar
+
