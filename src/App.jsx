@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import { useState } from 'react';
 import "./index.css";
 import Card from './components/Card';
+import Home from './pages/Home';
 
 function App() {
 
@@ -33,9 +34,9 @@ function App() {
             </div>
         </div>
     </div>
-      <NavDown />
-    <Card />
+
       <Routes>
+        <Route path="/" element={<Home />} />
 
       </Routes>
     </BrowserRouter>

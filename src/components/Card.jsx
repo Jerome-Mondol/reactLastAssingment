@@ -45,11 +45,11 @@ const Card = () => {
       <h1 className="text-2xl font-semibold mb-5 text-white">Find the best restaurant ratings below</h1>
       <div className="cards grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         {cards.map(({ id, name, desc, img, hoverImg, rating, reviews }) => (
-          <div key={id} className="card border rounded-lg shadow-lg w-[90%] bg-white">
+          <div key={id} className="card rounded-xl shadow-lg w-[90%] bg-white">
             <img
               src={img}
               alt={name}
-              className="w-full h-48 object-cover rounded-md"
+              className="w-full h-48 object-cover rounded-xl"
               onMouseEnter={(e) => e.target.src = hoverImg}
               onMouseLeave={(e) => e.target.src = img}
             />
