@@ -299,6 +299,9 @@ const Home = () => {
       </div>
       </div>
       <Footer />
+      <div className="copyright w-[50%] mx-auto text-center my-10 font-bold">
+        Copyright© Jerome Mondol | {new Date().getFullYear()}
+      </div>
     </div>
   );
 };
