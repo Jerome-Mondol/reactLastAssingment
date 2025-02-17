@@ -5,6 +5,7 @@ import { useState } from 'react';
 import "./index.css";
 import Card from './components/Card';
 import Home from './pages/Home';
+import BestRestaurants from './pages/BestRestaurants';
 
 function App() {
 
@@ -37,7 +38,7 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Home />} />
-
+        <Route path="/bestRestaurants" element={<BestRestaurants />} />
       </Routes>
     </BrowserRouter>
   );

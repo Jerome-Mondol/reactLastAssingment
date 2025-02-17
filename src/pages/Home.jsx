@@ -2,6 +2,7 @@ import React, { useState, useCallback } from "react";
 import { NavLink } from "react-router-dom";
 import ActivityCard from "../components/activityCard";
 import Footer from "../components/Footer";
+import BestCard from "../components/BestCard";
 
 // Navigation Data
 const navItems = [
@@ -266,9 +267,9 @@ const Home = () => {
       {/* Discover More Button */}
       <div className="text-center mt-10">
         <h1 className="text-xl my-5">Discover more cool restaurants</h1>
-        <button className="p-2 bg-blue-500 rounded-4xl text-white px-10">
+        <NavLink to={"/bestRestaurants"} ><button className="p-2 bg-blue-500 rounded-4xl text-white px-10 cursor-pointer">
           Show more
-        </button>
+        </button></NavLink>
       </div>
 
       {/* Feedback */}
@@ -290,13 +291,15 @@ const Home = () => {
           <img src="../../public/lastCard.png" alt="Image" />
         </div>
       </div>
-      <div className="mt-20" >
-        <h1 className=" text-3xl font-bold w-[80%] mx-auto mb-10" >Recents avtivities</h1>
-      <div className="flex mx-auto w-[80%] gap-20" >
-        <ActivityCard />
-        <ActivityCard />
-        <ActivityCard />
-      </div>
+      <div className="mt-20">
+        <h1 className=" text-3xl font-bold w-[80%] mx-auto mb-10">
+          Recents avtivities
+        </h1>
+        <div className="flex mx-auto w-[80%] gap-20">
+          <ActivityCard />
+          <ActivityCard />
+          <ActivityCard />
+        </div>
       </div>
       <Footer />
       <div className="copyright w-[50%] mx-auto text-center my-10 font-bold">
