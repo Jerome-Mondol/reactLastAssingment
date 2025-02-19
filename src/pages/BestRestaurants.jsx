@@ -1,5 +1,6 @@
 import React from "react";
 import BestCard from "../components/BestCard";
+import { NavLink } from "react-router-dom";
 
 const BestRestaurants = () => {
   return (
@@ -11,7 +12,11 @@ const BestRestaurants = () => {
         </div>
       </div>
 
-      <button>Show more</button>
+      <NavLink  to={"/italia"} >
+        <button className="p-2 bg-blue-500 rounded-4xl text-white px-10 cursor-pointer ml-15 mb-10">
+          Show more
+        </button>
+      </NavLink>
     </div>
   );
 };

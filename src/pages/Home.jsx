@@ -293,7 +293,7 @@ const Home = () => {
       </div>
       <div className="mt-20">
         <h1 className=" text-3xl font-bold w-[80%] mx-auto mb-10">
-          Recents avtivities
+          Recent activities
         </h1>
         <div className="flex mx-auto w-[80%] gap-20">
           <ActivityCard />
