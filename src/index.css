@@ -1,2 +1,8 @@
 @import "tailwindcss";
 @import 'remixicon/fonts/remixicon.css';
+
+.italiaHome {
+    background-image: url(../public/ItaliaHome.png);
+    object-fit: cover;
+    object-position: center;
+}
