@@ -1,6 +1,6 @@
 import React, { useState, useCallback } from "react";
 import { NavLink } from "react-router-dom";
-import ActivityCard from "../components/activityCard";
+import ActivityCard from "../components/ActivityCard";
 import Footer from "../components/Footer";
 import BestCard from "../components/BestCard";
 
